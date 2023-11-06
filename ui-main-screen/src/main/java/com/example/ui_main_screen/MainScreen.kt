@@ -1,4 +1,5 @@
 import android.annotation.SuppressLint
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,10 +20,12 @@ import androidx.compose.material3.SheetValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberBottomSheetScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.base_android.utils.Success
@@ -42,6 +45,12 @@ import kotlinx.coroutines.launch
 fun MainScreen(modifier: Modifier = Modifier) {
     val viewModel: MainScreenViewModel = hiltViewModel()
     val viewState by viewModel.collectAsState()
+    val contex = LocalContext.current
+    LaunchedEffect(viewState.buyTicketResponse) {
+        if (viewState.buyTicketResponse is Success) {
+            Toast.makeText(contex, "Success", Toast.LENGTH_SHORT).show()
+        }
+    }
     if (viewState.chairResponseData is Success && viewState.chair.isNotEmpty()) {
         MainScreen(modifier = modifier, viewState = viewState, action = { action ->
             when (action) {

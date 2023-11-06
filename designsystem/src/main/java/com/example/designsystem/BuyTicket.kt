@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.sp
 import com.example.designsystem.theme.Orange
 
 @Composable
-fun BuyTicket(modifier: Modifier, tiketSize: String, onSelectBuyItem: () -> Unit) {
+fun BuyTicket(modifier: Modifier,isEnable:Boolean =true, tiketSize: String, onSelectBuyItem: () -> Unit) {
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -49,8 +49,9 @@ fun BuyTicket(modifier: Modifier, tiketSize: String, onSelectBuyItem: () -> Unit
         }
         OutlinedButton(
             onClick = onSelectBuyItem, colors = ButtonDefaults.buttonColors(
-                containerColor = Orange
-            ), border = BorderStroke(width = 1.dp, color = Orange)
+                containerColor = Orange,
+                disabledContainerColor = Orange.copy(0.5f)
+            ), border = BorderStroke(width = 1.dp, color = Orange), enabled = isEnable
         ) {
             Text(text = "But Ticket", color = Color.White)
             Spacer(modifier = modifier.width(8.dp))

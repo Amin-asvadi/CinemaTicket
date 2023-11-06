@@ -22,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.base_android.utils.Loading
 import com.example.designsystem.BuyTicket
 import com.example.designsystem.DaysItem
 import com.example.designsystem.TimeItem
@@ -92,7 +93,11 @@ fun BottomNavigationContent(
                     )
                 }
             })
-        BuyTicket(modifier = modifier, viewState.chair.filter { it.isSelected }.size.toString()) {
+        BuyTicket(
+            modifier = modifier,
+            isEnable = viewState.buyTicketResponse !is Loading,
+            viewState.chair.filter { it.isSelected }.size.toString()
+        ) {
             buyItemClick()
         }
     }
