@@ -3,16 +3,6 @@
 
 Welcome to the Cinema Ticket App repository! This Android application is designed to help users book and manage cinema tickets. It utilizes modern Android development tools and practices, including Jetpack Compose, Hilt, Retrofit, and Kotlin Serialization.
 
-## Features
-
-- **Ticket Booking:** Users can browse movies and showtimes, select seats, and book cinema tickets.
-
-- **User Profile:** Allows users to create and manage their profiles, view booking history, and store payment information.
-
-- **Real-time Updates:** Keep users updated with movie schedules, promotions, and showtime changes.
-
-- **Modular Architecture:** The app follows a multi-modular architecture for better code organization and maintainability.
-
 ## Tech Stack
 
 - **Jetpack Compose:** Utilizing modern declarative UI development for building beautiful, responsive user interfaces.
