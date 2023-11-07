@@ -42,9 +42,6 @@ The project is organized into several modules for a more structured development 
 
 Contributions are welcome! If you have any suggestions, bug fixes, or new features to add, please feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
