@@ -31,7 +31,7 @@ The project is organized into several modules for a more structured development 
 - `data`: Handles data operations, including API calls and local storage.
 - `domain`: Contains business logic and data models.
 - `presentation`: UI components and view models using Jetpack Compose.
-
+![App Screenshot](https://github.com/Amin-asvadi/CinemaTicket/blob/master/screenshot/app.jpg)
 ## Setup and Usage
 
 1. Clone this repository.
